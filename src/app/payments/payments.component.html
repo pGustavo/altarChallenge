@@ -1,0 +1,36 @@
+<div class="top-area">
+  <div class="live"><span class="live-dot"></span><p>live</p></div>
+  <div class="code">
+    <p>Your code now:</p>
+    <p>{{code}}</p>
+  </div>
+</div>
+
+
+<div class="grid">
+  <div class="form-area">
+    <label for="payment"> Payment
+      <input placeholder="Payment" type="text" maxlength="100" #payment id="payment" (input)="paymentValue = payment.value">
+    </label>
+    <label for="ammount"> Ammount
+      <input placeholder="Ammount" type="text" maxlength="100" #ammount id="ammount" (input)="ammountValue = ammount.value">
+    </label>
+    <button class="small-btn" (click)="addPaymentValue()">+ add</button>
+
+  </div>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Ammount</th>
+      <th>code</th>
+      <th>grid</th>
+    </tr>
+    <tr *ngFor="let res of result">
+      <td>{{res.name}}</td>
+      <td>{{res.ammount}}</td>
+      <td>{{res.code}}</td>
+      <td>{{res.grid}}</td>
+    </tr>
+  </table>
+</div>

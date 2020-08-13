@@ -1,0 +1,29 @@
+
+<div class="grid">
+  <div class="top-bar">
+    <label for="char"> Character
+      <input type="text" maxlength="1" #char id="char" (input)="updateChar(char.value, $event)">
+    </label>
+    <img alt="clock" src="../../assets/clock.png" class="clock-img" />
+    <button class="main-btn" (click)="genRandomgrid()">GENERATE 2D GRID</button>
+  </div>
+
+  <table>
+    <tr>
+      <th></th>
+      <th *ngFor="let number of numbers">{{number}}</th>
+    </tr>
+    <tr *ngFor="let numberc of numbers">
+      <th>{{numberc}}</th>
+      <td *ngFor="let number of numbers" [class]="'row_' + numberc + 'c' + number"> </td>
+    </tr>
+  </table>
+</div>
+
+<div class="bottom-area">
+  <div class="live"><span class="live-dot"></span><p>live</p></div>
+  <div class="code">
+    <p>Your code:</p>
+    <p>{{code}}</p>
+  </div>
+</div>

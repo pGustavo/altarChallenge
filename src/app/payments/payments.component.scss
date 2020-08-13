@@ -1,0 +1,94 @@
+@import "src/styles";
+
+.live {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  p {
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+}
+.live-dot {
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+  margin: 2px 4px 2px 0;
+}
+.code {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 7px 78px;
+  margin-top: 10px;
+  display: flex;
+  p {
+    margin: 0 4px;
+    text-transform: uppercase;
+  }
+  p:nth-child(2) {
+    font-weight: bold;
+  }
+}
+.top-area {
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  margin: 20px 20%;
+  table td, table th {
+    padding: 8px;
+    text-align: center;
+  }
+
+  table tr:nth-child(even){background-color: #f2f2f2;}
+
+  table tr:hover {background-color: #ddd;}
+
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+label {
+  display: flex;
+  flex-flow: column nowrap;
+  color: $mainButton;
+  margin: 0 5px;
+  text-transform: uppercase;
+  font-size: 12px;
+  input {
+    color: $mainButton;
+    border: 1px solid $mainButton;
+    border-radius: 4px;
+    width: 82px;
+    height: 25px;
+    text-align: center;
+
+    &:disabled {
+      background-color: $mainGrey;
+    }
+  }
+}
+.form-area {
+  display: flex;
+  margin: 0 0 10px 0;
+  align-items: flex-end;
+}
+.small-btn {
+  background-color: $mainButton;
+  color: white;
+  font-weight: bold;
+  border: 1px solid $mainButton;
+  border-radius: 4px;
+  height: 30px;
+  width: 50px;
+  &:hover {
+    background-color: $mainButtonLight;
+    cursor: pointer;
+  }
+}
